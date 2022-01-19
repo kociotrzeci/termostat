@@ -1,0 +1,76 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "f:/git/termostat/include",
+                "f:/git/termostat/src",
+                "f:/git/termostat/.pio/libdeps/uno/Encoder",
+                "f:/git/termostat/.pio/libdeps/uno/Encoder/utility",
+                "f:/git/termostat/.pio/libdeps/uno/MegunoLink",
+                "f:/git/termostat/.pio/libdeps/uno/MegunoLink/utility",
+                "f:/git/termostat/.pio/libdeps/uno/LiquidCrystalIO/src",
+                "f:/git/termostat/.pio/libdeps/uno/IoAbstraction/src",
+                "f:/git/termostat/.pio/libdeps/uno/TaskManagerIO/src",
+                "C:/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "f:/git/termostat/.pio/libdeps/uno/DS18B20",
+                "f:/git/termostat/.pio/libdeps/uno/DallasTemperature",
+                "f:/git/termostat/.pio/libdeps/uno/OneWire",
+                "C:/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/.platformio/packages/framework-arduino-avr/variants/standard",
+                "C:/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "f:/git/termostat/include",
+                    "f:/git/termostat/src",
+                    "f:/git/termostat/.pio/libdeps/uno/Encoder",
+                    "f:/git/termostat/.pio/libdeps/uno/Encoder/utility",
+                    "f:/git/termostat/.pio/libdeps/uno/MegunoLink",
+                    "f:/git/termostat/.pio/libdeps/uno/MegunoLink/utility",
+                    "f:/git/termostat/.pio/libdeps/uno/LiquidCrystalIO/src",
+                    "f:/git/termostat/.pio/libdeps/uno/IoAbstraction/src",
+                    "f:/git/termostat/.pio/libdeps/uno/TaskManagerIO/src",
+                    "C:/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "f:/git/termostat/.pio/libdeps/uno/DS18B20",
+                    "f:/git/termostat/.pio/libdeps/uno/DallasTemperature",
+                    "f:/git/termostat/.pio/libdeps/uno/OneWire",
+                    "C:/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/.platformio/packages/framework-arduino-avr/variants/standard",
+                    "C:/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=50204",
+                "ARDUINO_AVR_UNO",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "C:/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
