@@ -1,7 +1,6 @@
 # termostat
 
 Encoder pins
-
 EncoderPinA - 3
 EncoderPinB - 10
 EncoderPinC - 2
