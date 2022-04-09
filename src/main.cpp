@@ -5,7 +5,7 @@
 #define TERMISTORNOMINAL 100000
 #define TEMPERATURENOMINAL 25
 #define BETA 3950
-#define R1 9620
+#define R1 9830
 #define pinA D3
 #define pinB D4
 #define pinC D5
@@ -13,6 +13,8 @@
 #define dolnaGrzalka D7
 #define DEBOUNCE_TIME 5
 #define DEBOUNCE_TIME2 1000
+#define napiecie 3.3 //napiecie na dzielniku napiecia
+#define rozdzielczosc 1024  // ilosc stanow na przetworniku analogowym 
 volatile uint32_t DebounceTimer = 0;
 volatile uint32_t DebounceTimer2 = 0;
 volatile uint32_t timer = 0;
@@ -196,7 +198,7 @@ void setup()
 }
 void loop()
 {
-  if (e == 100)
+  if (e == 1000)
   {
     display_reset();
     e = 0;
@@ -219,9 +221,9 @@ void loop()
     delay(5);
   }
   srednia = 0. + temp / samples;
-  aproksymacja_napiecia = 3.3 - srednia * 3.3 / 1024;
-  srednia = 1023 - srednia;
-  aproksymacja_rezystancji = 1023 / srednia - 1;
+  aproksymacja_napiecia = napiecie - srednia * napiecie / rozdzielczosc;
+  srednia = rozdzielczosc-1 - srednia;
+  aproksymacja_rezystancji = (rozdzielczosc-1) / srednia - 1;
   aproksymacja_rezystancji = R1 / aproksymacja_rezystancji;
   float steinhart;
   steinhart = aproksymacja_rezystancji / TERMISTORNOMINAL; // (R/Ro)
