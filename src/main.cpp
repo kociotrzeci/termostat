@@ -9,6 +9,7 @@
 #define pinA D3
 #define pinB D4
 #define pinC D5
+#define buzzer D8
 #define gornaGrzalka D6
 #define dolnaGrzalka D7
 #define DEBOUNCE_TIME 5
@@ -19,6 +20,7 @@ volatile uint32_t DebounceTimer = 0;
 volatile uint32_t DebounceTimer2 = 0;
 volatile uint32_t timer = 0;
 volatile uint32_t timertemp = 0;
+volatile uint32_t timerBeep = 0;
 volatile int32_t setTime = 1200000;
 volatile int32_t button = 0;
 volatile int32_t tryb = 0;
@@ -109,6 +111,13 @@ void czas()
   if (setTime < 0)
   {
     grzeje = 0;
+    if(millis()>timerBeep+1000) {tone(buzzer,3500,500); timerBeep=millis();}
+    else                         tone(buzzer,0);
+  }
+    if (setTime > 0)
+  {
+    grzeje = 1;
+    tone(buzzer,0);
   }
 }
 void display_reset()
@@ -195,6 +204,7 @@ void setup()
   attachInterrupt(digitalPinToInterrupt(pinA), przycisk, RISING);
   pinMode(gornaGrzalka, OUTPUT);
   pinMode(dolnaGrzalka, OUTPUT);
+  pinMode(buzzer, OUTPUT);
 }
 void loop()
 {
