@@ -5,7 +5,7 @@
 #define TERMISTORNOMINAL 100000
 #define TEMPERATURENOMINAL 25
 #define BETA 3950
-#define R1 9830
+#define R1 2000
 #define pinA D3
 #define pinB D4
 #define pinC D5
